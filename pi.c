@@ -6,11 +6,9 @@ int main(){
     float x,y;
 
     for (n=1;n<=10000000;n++){
-
-
-        x =(float)(rand()%100)/100;// Assigne une valeur à x entre 0 et 1
-        y=(float)(rand()%100)/100;// Assigne une valeur à y entre 0 et 1
-        if ((x*x+y*y)<=1.0) // vérifie si le point (x,y) se situe dans le cercle de rayon 1 et de centre 0
+        x =(float)(rand())/(RAND_MAX/2)-1;// Assigne une valeur Ã  x entre -1 et 1
+        y=(float)(rand())/(RAND_MAX/2)-1;// Assigne une valeur Ã  y entre -1 et 1
+        if ((x*x+y*y)<=1.0) // vÃ©rifie si le point (x,y) se situe dans le cercle de rayon 1 et de centre 0
             p+=1;
     }
     printf("Approximation de pi: %f",(float)(4*p)/n);
